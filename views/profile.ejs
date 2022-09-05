@@ -1,0 +1,20 @@
+<%- include("partials/head") %>
+<%- include("partials/navbar_login") %>
+<%userProfile.forEach(function(user){%>
+<div class="card">
+    <h1><%=user.fullName %></h1>
+    <br>
+    <p class="title"><%=user.username %></p>
+    <br>
+</div>
+
+
+
+
+
+<!-- <div class="wrapper">
+    <div class="name"><p> <%=user.fullName %> </p></div>
+    <div class="about"><p> <%=user.username %> </p></div>
+    <br>
+</div> -->
+<%  }) %>
