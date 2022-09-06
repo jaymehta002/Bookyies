@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.use(session({
-    secret: process.env.SECRET,
+    secret: "If you are seeing this, you are too damn close",
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -27,7 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect('mongodb+srv://jaymehta:jaymehta@portfolio.h76h5.mongodb.net/?retryWrites=true&w=majority')
     .then(() => console.log(`Connected to databse Successfully`))
     .catch(err => console.log(err));
 
