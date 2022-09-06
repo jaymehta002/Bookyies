@@ -28,7 +28,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://jaymehta:jaymehta@portfolio.h76h5.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://jaymehta:jaymehta@portfolio.h76h5.mongodb.net/?retryWrites=true')
     .then(() => console.log(`Connected to databse Successfully`))
     .catch(err => console.log(err));
 
