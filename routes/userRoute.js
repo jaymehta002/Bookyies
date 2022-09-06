@@ -27,7 +27,7 @@ router.post("/auth/register", async(req, res) => {
     } catch (error) {
         if(error.name = "UserExistsError")
             res.redirect("/register",);
-            
+        console.log(error)     
     }
 });
 
